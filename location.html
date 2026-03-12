@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="./e.css">
+  </head>
+
+  <style>
+
+body{
+  font-family: Arial, sans-serif;
+  margin:0;
+  padding:0;
+  line-height:1.6;
+}
+
+h1,h2,h3{
+  color:#0d6efd;
+  box-shadow: 3px 3px 5px rgba(3, 181, 194, 0.527);
+}
+
+.container{
+  width:100%;
+  max-width:1300px;
+  margin:auto;
+}
+
+.hero img{
+  width:100%;
+  border-radius:10px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+  gap:15px;
+}
+
+.card{
+  border:1px solid #ddd;
+  padding:10px;
+  border-radius:8px;
+  background:#fff;
+}
+
+.card img{
+  width:100%;
+  border-radius:6px;
+}
+
+
+.image{
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  margin-top: 0%;
+}
+
+
+
+.nav-links li {
+    position: relative;
+
+}
+
+
+.dropdown-content {
+    display: none;      
+    position: absolute;  
+    top: 100%;         
+    left: 0;
+    background-color: white; 
+    min-width: 200px;    
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2); 
+    z-index: 1000;       
+    padding: 0;
+    list-style: none;
+}
+
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+.dropdown-content li a {
+    color: black !important; 
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid #f1f1f1;
+    font-size: 14px;
+    text-align: left;
+}
+
+
+.dropdown-content li a:hover {
+    background-color: #f9f9f9;
+}
+
+
+
+
+.logo {
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+
+
+
+
+.nav-btn {
+  padding: 5px 10px;         
+  font-size: 12px;          
+  text-decoration: none;
+  border: 1px solid white;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+
+
+.ab-logo {
+  display: flex;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+
+.ab-a,
+.ab-b {
+  font-size: 40px;
+  font-weight: bold;
+  color: #1e88e5;
+}
+
+
+
+
+
+.ab-tooth {
+  font-size: 38px;
+  color: white;
+  margin: 0 -6px;
+}
+
+
+.ab-text {
+  margin-left: 10px;
+  font-size: 26px;
+ 
+  color: white; 
+}
+
+
+/* Navbar UL center */
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Remove default list style */
+.navbar-nav li {
+    list-style: none;
+}
+
+
+.nav-btn {
+    color: white;
+    text-decoration: none;
+    padding: 8px 18px;
+    margin: 0 8px;
+    border: 2px solid #0d6efd;
+    border-radius: 6px;
+    transition: 0.3s ease;
+    font-weight: 500;
+}
+
+/* Hover Effect */
+.nav-btn:hover {
+    background-color: orange;
+    color: white;
+    box-shadow: 0 0 10px #0d6efd;
+}
+
+
+
+    </style>
+  <body>
+ 
+
+
+<nav class="navbar navbar-expand-lg bg" style="background-color: black; color: white;   padding: 10px;
+ display: flex; justify-content: space-between; align-items: right; text-align: right; ">
+  <div class="container-fluid" >
+    <div class="ab-logo">
+  <span class="ab-a">A</span>
+  <span class="ab-tooth">🦷</span>
+  <span class="ab-b">B</span>
+  <span class="ab-text">Dental Clinic</span>
+</div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" style="display: flex; justify-content: center; 
+    align-items: center; text-align: center;">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="display: flex; align-items:right; text-align: right;
+       justify-content: center;" >
+        <li class="nav-item">
+          <a class="nav-btn" aria-current="page" href="./main.html">HOME</a>
+        </li>
+       
+ <li class="nav-item">
+          <a class="nav-btn" aria-current="page" href="./About.html">ABOUT-US</a>
+        </li>
+       
+       
+
+               <li class="dropdown">
+      <a href="#" class="nav-btn">SERVICES</a>
+      <ul class="dropdown-content">
+          <li><a href="implants.html">Introduction</a></li>
+        <li><a href="./rootcanal.html">Root Canal</a></li>
+        <li><a href="./childdentist.html">Child Dentist</a></li>
+        <li><a href="scaling.html">Scaling and Polishing</a></li>
+        <li><a href="./Implaments.html">Dental Implants</a></li>
+        <li><a href="./braces.html">Braces</a></li>
+          <li><a href="./Toothfilling.html">Tooth Fillings</a></li>
+            <li><a href="./veeners.html">Veeners</a></li>
+              <li><a href="./toothxray.html">Tooth X-ray</a></li>
+               
+                  
+      </ul>
+    </li>
+
+  <li class="nav-item">
+          <a class="nav-btn" aria-current="page" href="./Result.html">RESULT</a>
+        </li>
+       
+ <li class="nav-item">
+          <a class="nav-btn" aria-current="page" href="./Patient.html">PATIENT TREATMENT</a>
+        </li>
+
+
+          <li class="nav-item">
+          <a class="nav-btn" aria-current="page" href="./location.html">LOCATION</a>
+        </li>
+       
+ <li class="nav-item">
+          <a class="nav-btn " aria-current="page" href="./contact.html">CONTACT-US</a>
+        </li>
+
+
+
+       
+
+
+
+
+
+
+
+      </ul>
+    
+    </div>
+  </div>
+</nav>
+
+<br><br>
+<div class="container">
+  
+
+  <h1>Best  A🦷B Dental Clinic in DHA Karachi</h1>
+
+  <!-- Hero Image -->
+  <div class="hero">
+    <img src="https://images.pexels.com/photos/3992156/pexels-photo-3992156.jpeg" alt="" height="500" width="100%">
+  </div>
+     
+  <p> A🦷B Dental Clinic  DHA Karachi me located aik modern dental clinic hai jahan experienced dentists aap ko high quality treatment provide karte hain.</p>
+ <br><br>
+  <h2> A🦷B Dental Clinic Services in DHA Karachi</h2>
+<br><br>
+  <div class="grid">
+    <div class="card">
+      <img src="images/teeth-whitening.jpg" alt="Teeth Whitening in DHA Karachi">
+      <h3>Teeth Whitening</h3>
+      <p>Professional teeth whitening treatment for bright smile.</p>
+    </div>
+
+    <div class="card">
+      <img src="./images/Dental Implants.png" alt="Dental Implants in DHA Karachi" height="250">
+      <h3>Dental Implants</h3>
+      <p>Permanent solution for missing teeth.</p>
+    </div>
+
+    <div class="card">
+      <img src="./images/Braces Treatment (Orthodontics).png" alt="Braces Treatment in DHA Karachi">
+      <h3>Braces Treatment</h3>
+      <p>Advanced braces for perfect alignment.</p>
+    </div>
+  </div>
+<br><br>
+  <h2>Clinic Location</h2>
+  <p><strong>Address:</strong> Shop #12, DHA Phase 2, Karachi</p>
+  <p><strong>Phone:</strong> 0300-1234567</p>
+<br><br>
+  <h2>Find Us on Map</h2>
+  <iframe src="https://www.google.com/maps/embed?pb=YOUR_MAP_LINK"
+    width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+</div>
+
+
+
+<br><br>
+<footer class="footer">
+    
+    <div class="floating-icons">
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/124/124010.png" alt="FB"></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="IG"></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="X"></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YT"></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="IN"></a>
+    </div>
+
+  <div class="footer-container">
+        <div class="footer-column">
+            <h3>About Us</h3>
+            <p>Our lead dentist is not new to this field. Dr. Abubakar Siddique is known for his smile makeovers...</p>
+        </div>
+
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Result</a></li>
+                <li><a href="#">Patient&Treatment</a></li>
+                <li><a href="#">Location</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h3>Saddar Clinic</h3>
+            <p><strong>Address:</strong> Room #3 & 4, 2nd Floor, C15/1, Moiz Clinics...</p>
+            <p><strong>Timings:</strong> 12:00pm - 10:00pm</p>
+        </div>
+
+        <div class="footer-column">
+            <h3>DHA, ZAMZAMA CLINIC</h3>
+            <p><strong>Address:</strong> Mezzanine Floor, Essa Lab, Phase 5...</p>
+            <p><strong>Timings:</strong> 10:00am - 8:00pm</p>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
+</html>

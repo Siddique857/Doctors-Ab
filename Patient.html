@@ -1,0 +1,641 @@
+ <!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="./e.css">
+  </head>
+
+   
+   
+   
+   
+   
+   <style>
+
+        .huge-card {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(11, 226, 226, 0.733);
+            width: 100%;
+            max-width: 1500px;
+            height: 80vh;
+            overflow-y: auto;
+            padding: 40px;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        .huge-card img {
+            display: block;
+            margin: 20px auto;
+            max-width: 1300px;
+            height: 400px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        .huge-card h1 {
+            color: #0873dd;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 36px;
+        }
+        .huge-card h2 {
+            color: #066bcf;
+            margin-top: 30px;
+            font-size: 28px;
+        }
+        .huge-card h3 {
+            color: #0a4ddd;
+            margin-top: 20px;
+            font-size: 24px;
+        }
+        .huge-card h4 {
+            color: #0c70ce;
+            margin-top: 15px;
+            font-size: 20px;
+        }
+        .huge-card p {
+            margin-bottom: 20px;
+        }
+        .huge-card ul {
+            margin-left: 20px;
+        }
+        .huge-card li {
+            margin-bottom: 10px;
+        }
+
+
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+    
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .card {
+            background: #fff;
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+            flex: 0 0 calc(33.333% - 20px);
+            box-sizing: border-box;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .card-content h3 {
+            margin: 0 0 10px;
+        }
+
+        .card-content p {
+            color: #555;
+            font-size: 14px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 12px;
+            background: #2161a1d3;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+            align-items: baseline;
+            text-align: center;
+            justify-content: center;
+            position: relative;
+
+        }
+
+        .btn:hover {
+            background: #264669;
+        }
+        
+.card-container {
+  display: flex;
+  flex-direction: row;   
+  align-items: center;      
+  gap: 20px; 
+
+}
+
+.card {
+  width: 300px;             
+}
+
+
+
+        
+  .read-more {
+  background: linear-gradient(45deg, #00c6ff, #0072ff);
+  color: white;
+  padding: 8px 18px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.read-more:hover {
+  box-shadow: 0 5px 15px rgba(47, 178, 211, 0.692);
+}      
+        
+    
+
+.nav-links li {
+    position: relative;
+
+}
+
+
+.dropdown-content {
+    display: none;      
+    position: absolute;  
+    top: 100%;         
+    left: 0;
+    background-color: white; 
+    min-width: 200px;    
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2); 
+    z-index: 1000;       
+    padding: 0;
+    list-style: none;
+}
+
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+.dropdown-content li a {
+    color: black !important; 
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid #f1f1f1;
+    font-size: 14px;
+    text-align: left;
+}
+
+
+.dropdown-content li a:hover {
+    background-color: #f9f9f9;
+}
+
+
+
+
+.logo {
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+
+
+
+
+.nav-btn {
+  padding: 5px 10px;         
+  font-size: 12px;          
+  text-decoration: none;
+  border: 1px solid white;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+
+
+.ab-logo {
+  display: flex;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+
+.ab-a,
+.ab-b {
+  font-size: 40px;
+  font-weight: bold;
+  color: #1e88e5;
+}
+
+
+
+
+
+.ab-tooth {
+  font-size: 38px;
+  color: white;
+  margin: 0 -6px;
+}
+
+
+.ab-text {
+  margin-left: 10px;
+  font-size: 26px;
+ 
+  color: white; 
+}
+
+
+/* Navbar UL center */
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Remove default list style */
+.navbar-nav li {
+    list-style: none;
+}
+
+
+.nav-btn {
+    color: white;
+    text-decoration: none;
+    padding: 8px 18px;
+    margin: 0 8px;
+    border: 2px solid #0d6efd;
+    border-radius: 6px;
+    transition: 0.3s ease;
+    font-weight: 500;
+}
+
+/* Hover Effect */
+.nav-btn:hover {
+    background-color: orange;
+    color: white;
+    box-shadow: 0 0 10px #0d6efd;
+}
+
+
+
+    </style>
+  <body>
+ 
+
+
+<nav class="navbar navbar-expand-lg bg" style="background-color: black; color: white;   padding: 10px;
+ display: flex; justify-content: space-between; align-items: right; text-align: right; ">
+  <div class="container-fluid" >
+    <div class="ab-logo">
+  <span class="ab-a">A</span>
+  <span class="ab-tooth">🦷</span>
+  <span class="ab-b">B</span>
+  <span class="ab-text">Dental Clinic</span>
+</div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" style="display: flex; justify-content: center; 
+    align-items: center; text-align: center;">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="display: flex; align-items:right; text-align: right;
+       justify-content: center;" >
+        <li class="nav-item">
+          <a class="nav-btn" aria-current="page" href="./main.html">HOME</a>
+        </li>
+       
+ <li class="nav-item">
+          <a class="nav-btn" aria-current="page" href="./About.html">ABOUT-US</a>
+        </li>
+       
+       
+
+               <li class="dropdown">
+      <a href="#" class="nav-btn">SERVICES</a>
+      <ul class="dropdown-content">
+          <li><a href="implants.html">Introduction</a></li>
+        <li><a href="./rootcanal.html">Root Canal</a></li>
+        <li><a href="./childdentist.html">Child Dentist</a></li>
+        <li><a href="scaling.html">Scaling and Polishing</a></li>
+        <li><a href="./Implaments.html">Dental Implants</a></li>
+        <li><a href="./braces.html">Braces</a></li>
+          <li><a href="./Toothfilling.html">Tooth Fillings</a></li>
+            <li><a href="./veeners.html">Veeners</a></li>
+              <li><a href="./toothxray.html">Tooth X-ray</a></li>
+               
+                  
+      </ul>
+    </li>
+
+  <li class="nav-item">
+          <a class="nav-btn" aria-current="page" href="./Result.html">RESULT</a>
+        </li>
+       
+ <li class="nav-item">
+          <a class="nav-btn" aria-current="page" href="./Patient.html">PATIENT TREATMENT</a>
+        </li>
+
+
+          <li class="nav-item">
+          <a class="nav-btn" aria-current="page" href="./location.html">LOCATION</a>
+        </li>
+       
+ <li class="nav-item">
+          <a class="nav-btn " aria-current="page" href="./contact.html">CONTACT-US</a>
+        </li>
+
+
+
+       
+
+
+
+
+
+
+
+      </ul>
+    
+    </div>
+  </div>
+</nav>
+
+
+
+    <div class="huge-card">
+        <h1>Dentist-Patient Relations and Treatments</h1>
+        <img src="./images/Dentist-Patient Relations and Treatments.png" height="150px" width="100%" alt="Dental Care Image">
+        
+        <h2>The Dentist-Patient Relationship</h2>
+        <p>The dentist-patient relationship is built on trust, communication, and mutual respect. Dentists are healthcare professionals who diagnose, treat, and prevent oral health issues, while patients rely on them for expert care. Key aspects include:</p>
+        <ul>
+            <li><strong>Trust and Confidentiality:</strong> Patients share personal health information, and dentists maintain HIPAA-compliant confidentiality to ensure privacy.</li>
+            <li><strong>Communication:</strong> Open dialogue allows dentists to understand patient concerns, explain procedures, and discuss treatment options. Informed consent is crucial, where patients are educated about risks, benefits, and alternatives.</li>
+            <li><strong>Ethical Standards:</strong> Dentists follow codes of ethics, such as those from the American Dental Association (ADA), emphasizing patient autonomy, non-maleficence (do no harm), and beneficence (act in the patient's best interest).</li>
+            <li><strong>Long-Term Partnership:</strong> Regular check-ups foster ongoing relationships, enabling preventive care and early intervention for issues like cavities, gum disease, or oral cancer.</li>
+        </ul>
+        
+        <h2>Common Dental Treatments</h2>
+        <p>Dental treatments aim to maintain oral health, restore function, and enhance aesthetics. They range from preventive to restorative and cosmetic procedures. Here's an overview:</p>
+        <ul>
+            <li><strong>Preventive Treatments:</strong> Regular cleanings, fluoride applications, and sealants to prevent decay. X-rays for early detection of problems.</li>
+            <li><strong>Restorative Treatments:</strong> Fillings for cavities, crowns for damaged teeth, bridges or implants for missing teeth, and root canals to save infected teeth.</li>
+            <li><strong>Periodontal Treatments:</strong> Scaling and root planing for gum disease, surgery for advanced cases to prevent tooth loss.</li>
+            <li><strong>Cosmetic Treatments:</strong> Teeth whitening, veneers, and orthodontics (braces or aligners) to improve appearance and alignment.</li>
+            <li><strong>Emergency Treatments:</strong> Handling toothaches, knocked-out teeth, or injuries, often involving pain management and quick repairs.</li>
+        </ul>
+        
+        <h3>Details on Specific Treatments</h3>
+        <h4>Teeth Whitening</h4>
+        <p>Teeth whitening is a popular cosmetic procedure designed to lighten the color of teeth and remove stains caused by food, drinks (like coffee or wine), smoking, or aging. It can be performed in-office by a dentist or at home using dentist-provided kits.</p>
+        <ul>
+            <li><strong>In-Office Whitening:</strong> The dentist applies a high-concentration bleaching gel to the teeth, often activated by a special light. Sessions typically last 30-60 minutes, and results are visible immediately, with teeth becoming several shades whiter.</li>
+            <li><strong>At-Home Whitening:</strong> Custom trays are made to fit your teeth, filled with a lower-concentration gel. You wear them for a few hours daily or overnight for 1-2 weeks.</li>
+            <li><strong>Benefits:</strong> Boosts confidence by improving smile aesthetics. It's generally safe but may cause temporary sensitivity; consult your dentist to ensure it's suitable for you.</li>
+        </ul>
+        
+        <h4>Root Canal</h4>
+        <p>A root canal is a restorative procedure to treat infected or inflamed tooth pulp (the soft tissue inside the tooth). It's necessary when a cavity, crack, or injury allows bacteria to reach the pulp, causing pain, swelling, or abscesses.</p>
+        <ul>
+            <li><strong>Procedure Steps:</strong> The dentist numbs the area with local anesthesia, removes the infected pulp, cleans and shapes the root canals, and fills them with a biocompatible material. A crown is often placed afterward to protect the tooth.</li>
+            <li><strong>Why It's Done:</strong> Saves the tooth from extraction, relieves pain, and prevents the spread of infection to surrounding tissues or bones.</li>
+            <li><strong>Recovery:</strong> Mild discomfort may occur post-procedure, manageable with over-the-counter pain relievers. Full healing takes a few days to weeks. Success rates are high (over 90%), allowing the tooth to function normally for years.</li>
+        </ul>
+        
+        <h2>Common Dental Problems and Treatments</h2>
+        <p>Dental problems can arise from poor hygiene, diet, genetics, or injury. Early detection and treatment are key to preventing complications. Below are some common issues that occur in teeth, their causes, symptoms, and treatments, with illustrative images.</p>
+        
+        <h3>Cavities (Tooth Decay)</h3>
+        <img src="./images/Cavities (Tooth Decay).png" width="1300px" height="400px" alt="Cavities Image">
+        <p>Cavities are permanently damaged areas in the hard surface of your teeth that develop into tiny openings or holes. They are caused by a combination of factors, including bacteria in your mouth, frequent snacking, sugary drinks, and not cleaning your teeth well.</p>
+        <ul>
+            <li><strong>Symptoms:</strong> Toothache, sensitivity to hot/cold/sweet foods, visible holes or pits in teeth, pain when biting down.</li>
+            <li><strong>Treatment:</strong> Fillings (amalgam or composite resin) to restore the tooth. In severe cases, crowns or root canals may be needed. Prevention includes brushing twice daily, flossing, and regular dental check-ups.</li>
+        </ul>
+        
+        <h3>Gum Disease (Periodontitis)</h3>
+        <img src="./images/Gum Disease (Periodontitis).png" width="1300px" height="400px" alt="Gum Disease Image">
+        <p>Gum disease is an infection of the tissues that hold your teeth in place. It's usually caused by poor oral hygiene, leading to plaque buildup that hardens into tartar, irritating the gums and causing inflammation.</p>
+        <ul>
+            <li><strong>Symptoms:</strong> Red, swollen, or bleeding gums, bad breath, loose teeth, receding gums, pain when chewing.</li>
+            <li><strong>Treatment:</strong> Professional cleaning (scaling and root planing), antibiotics for infection, surgery in advanced cases (like flap surgery or bone grafts). Prevention: Daily brushing, flossing, and dental visits every 6 months.</li>
+        </ul>
+        
+        <h3>Tooth Loss</h3>
+        <img src="./images/Tooth Los.png" width="1300px" height="400px" alt="Tooth Loss Image">
+        <p>Tooth loss can result from untreated cavities, gum disease, injury, or aging. It affects chewing, speech, and self-esteem.</p>
+        <ul>
+            <li><strong>Symptoms:</strong> Missing teeth, difficulty eating or speaking, shifting of remaining teeth.</li>
+            <li><strong>Treatment:</strong> Dental implants (surgically placed in the jawbone), bridges (fixed prosthetic devices), or dentures (removable appliances). Implants are the most durable option, mimicking natural teeth.</li>
+        </ul>
+        
+        <h3>Oral Cancer</h3>
+        <img src="./images/Oral Cancer.png" width="1300px" height="400px" alt="Oral Cancer Image">
+        <p>Oral cancer includes cancers of the lips, tongue, cheeks, floor of the mouth, hard and soft palate, sinuses, and pharynx. Risk factors include tobacco use, heavy alcohol consumption, HPV infection, and sun exposure.</p>
+        <ul>
+            <li><strong>Symptoms:</strong> Persistent mouth sores, lumps, white/red patches, difficulty swallowing, unexplained bleeding, numbness.</li>
+            <li><strong>Treatment:</strong> Surgery to remove tumors, radiation therapy, chemotherapy, or targeted therapy. Early detection through regular screenings improves survival rates. Prevention: Avoid tobacco, limit alcohol, and get vaccinated against HPV.</li>
+        </ul>
+        
+        <h3>Tooth Sensitivity</h3>
+        <img src="./images/Tooth Sensitivity.png" width="1300px" height="400px" alt="Tooth Sensitivity Image">
+        <p>Tooth sensitivity occurs when the enamel (outer layer of the tooth) wears away, exposing the dentin underneath, which contains tiny tubules leading to the nerve. Causes include brushing too hard, acidic foods, gum recession, or cracked teeth.</p>
+        <ul>
+            <li><strong>Symptoms:</strong> Sharp pain when eating hot, cold, sweet, or acidic foods; pain when brushing or flossing.</li>
+            <li><strong>Treatment:</strong> Desensitizing toothpaste, fluoride treatments, dental bonding, or crowns. Prevention: Use a soft-bristled toothbrush, avoid acidic foods, and maintain good oral hygiene.</li>
+        </ul>
+        
+        <h3>Bad Breath (Halitosis)</h3>
+        <img src="./images/Bad Breath (Halitosis).png" width="1300px" height="400px" alt="Bad Breath Image">
+        <p>Bad breath is an unpleasant odor from the mouth, often caused by poor oral hygiene, food particles stuck in teeth, dry mouth, smoking, or underlying health issues like gum disease or sinus infections.</p>
+        <ul>
+            <li><strong>Symptoms:</strong> Persistent bad odor from the mouth, even after brushing.</li>
+            <li><strong>Treatment:</strong> Improved oral hygiene (brushing, flossing, tongue cleaning), mouthwashes, professional cleanings. If due to medical conditions, consult a doctor. Prevention: Regular dental check-ups and hydration.</li>
+        </ul>
+        
+        <h3>Tooth Abscess</h3>
+        <img src="./Tooth Abscess.png" width="1300px" height="400px" alt="Tooth Abscess Image">
+        <p>A tooth abscess is a pocket of pus caused by a bacterial infection, usually from untreated cavities, gum disease, or dental trauma. It can be periapical (at the tooth root) or periodontal (in the gums).</p>
+        <ul>
+            <li><strong>Symptoms:</strong> Severe toothache, swelling in the face or gums, fever, bad taste in the mouth, difficulty swallowing.</li>
+            <li><strong>Treatment:</strong> Draining the abscess, antibiotics, root canal or tooth extraction. Prevention: Good oral hygiene and prompt treatment of cavities.</li>
+        </ul>
+        
+        <h3>Cracked Tooth</h3>
+        <img src="./images/Cracked Tooth.png" width="1300px" height="400px" alt="Cracked Tooth Image">
+        <p>A cracked tooth occurs when a tooth fractures, often due to biting hard objects, trauma, or large fillings weakening the tooth. Cracks can be minor (craze lines) or severe (extending to the root).</p>
+        <ul>
+            <li><strong>Symptoms:</strong> Pain when biting or chewing, sensitivity to temperature, swelling.</li>
+            <li><strong>Treatment:</strong> Dental bonding, crowns, or root canals for severe cracks. Extraction if the tooth can't be saved. Prevention: Avoid chewing hard foods and wear mouthguards during sports.</li>
+        </ul>
+        
+        <h3>Impacted Teeth</h3>
+        <img src="./images/Impacted Teeth.png" width="1300px" height="400px" alt="Impacted Teeth Image">
+        <p>Impacted teeth are teeth that fail to erupt properly, often wisdom teeth stuck in the jawbone or gums. This can cause pain, infection, or damage to adjacent teeth.</p>
+        <ul>
+            <li><strong>Symptoms:</strong> Pain in the back of the mouth, swelling, difficulty opening the mouth, bad breath.</li>
+            <li><strong>Treatment:</strong> Extraction if causing problems. Orthodontic treatment to guide eruption if possible. Prevention: Regular X-rays to monitor wisdom teeth.</li>
+        </ul>
+        
+        <h3>TMJ Disorders</h3>
+        <img src="./images/tmj.jpeg" width="1300px" height="400px" alt="TMJ Disorders Image">
+        <p>Temporomandibular joint (TMJ) disorders affect the joint connecting the jaw to the skull. Causes include teeth grinding, arthritis, injury, or stress.</p>
+        <ul>
+            <li><strong>Symptoms:</strong> Jaw pain, clicking or popping sounds, difficulty chewing, headaches, ear pain.</li>
+            <li><strong>Treatment:</strong> Mouthguards, physical therapy, medications for pain/inflammation, surgery in severe cases. Prevention: Avoid hard chewing and manage stress.</li>
+        </ul>
+        
+        <p>Always consult a licensed dentist for personalized advice. Regular dental visits (every 6 months) are recommended for optimal oral health.</p>
+    </div>
+
+    <br><br>
+    <h1>My Cards Page</h1>
+
+<div class="card-container">
+
+    <div class="card">
+        <img src="./images/WhatsApp Image 2026-02-15 at 10.31.29 PM (1).jpeg" alt="Nature">
+        <div class="card-content">
+            <h3>Synflex-M </h3>
+            
+            <p>Synflex-M 85mg+500mg Tablet is a combination medication used to relieve pain and inflammation associated with musculoskeletal disorders, such as osteoarthritis and rheumatoid arthritis. It combines aceclofenac (a non-steroidal anti-inflammatory drug) and paracetamol (a pain reliever) to provide effective symptom relief.</p>
+            <a href="#" class="btn">Read More</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="./images/anasaid.jpeg" alt="City">
+        <div class="card-content">
+            <h3>ANSAID</h3>
+            <p>
+Ansaid is a nonsteroidal anti-inflammatory drug (NSAID) commonly prescribed for toothache pain in Pakistan. It reduces both inflammation and pain, making it highly effective teeth pain tablet for treating mild to severe dental issues. It is especially recommended after root canal treatments and deep fillings.
+
+Side effects: Common side effects include heartburn, nausea, and upset stomach.
+</p>
+            <a href="#" class="btn">Read More</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="./images/torex.jpeg" alt="./">
+        <div class="card-content">
+            <h3>2. . Torex IR</h3>
+            <p>Although Torex IDiclofenac is an NSAID that relieves moderate pain by reducing inflammation and fever. It’s often used as teeth pain tablets, particularly when other painkillers are ineffective.R is primarily used for coughs and colds, it can be effective for minor dental pain and inflammation. It is sometimes used for post-operative dental pain as well.</p>
+            <a href="#" class="btn">Read More</a>
+        </div>
+    </div>
+
+</div>
+<br>
+
+
+<div class="card-container">
+
+    <div class="card">
+        <img src="./images/tylenol strength.jpeg" alt="Nature">
+        <div class="card-content">
+            <h3>TYLENOL </h3>
+            
+            <p>Acetaminophen (also known as paracetamol) is a non-NSAID pain reliever often recommended for tooth pain. In Pakistan, it is the imported tooth pain tablets. </p>
+            <a href="#" class="btn">Read More</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="./images/WhatsApp Image 2026-02-15 at 10.31.29 PM.jpeg" alt="City">
+        <div class="card-content">
+            <h3>DICNOFENAC-50 MG</h3>
+            <p>
+Diclofenac is an NSAID that relieves moderate pain by reducing inflammation and fever. It’s often used as teeth pain tablets, particularly when other painkillers are ineffective.
+</p>
+            <a href="#" class="btn">Read More</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="./images/tramal-plus.jpeg" alt="./">
+        <div class="card-content">
+            <h3>2 TRAMAL-PLUS</h3>
+            <p>Although Torex IR is primarily used for coughs and colds, it can be effective for minor dental pain and inflammation. It is sometimes used for post-operative dental pain as well.</p>
+            <a href="#" class="btn">Read More</a>
+        </div>
+    </div>
+
+<br><br>
+<footer class="footer">
+    
+    <div class="floating-icons">
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/124/124010.png" alt="FB"></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="IG"></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="X"></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YT"></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="IN"></a>
+    </div>
+
+  <div class="footer-container">
+        <div class="footer-column">
+            <h3>About Us</h3>
+            <p>Our lead dentist is not new to this field. Dr. Abubakar Siddique is known for his smile makeovers...</p>
+        </div>
+
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Result</a></li>
+                <li><a href="#">Patient&Treatment</a></li>
+                <li><a href="#">Location</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h3>Saddar Clinic</h3>
+            <p><strong>Address:</strong> Room #3 & 4, 2nd Floor, C15/1, Moiz Clinics...</p>
+            <p><strong>Timings:</strong> 12:00pm - 10:00pm</p>
+        </div>
+
+        <div class="footer-column">
+            <h3>DHA, ZAMZAMA CLINIC</h3>
+            <p><strong>Address:</strong> Mezzanine Floor, Essa Lab, Phase 5...</p>
+            <p><strong>Timings:</strong> 10:00am - 8:00pm</p>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+    
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
+</html>
